@@ -271,6 +271,7 @@ else ifneq (,$(findstring armv,$(platform)))
 		PLATFORM_DEFINES += -mfloat-abi=hard
 	endif
 	PLATFORM_DEFINES += -DARM
+	LDFLAGS := -lm
 
 # emscripten
 else ifeq ($(platform), emscripten)
